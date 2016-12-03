@@ -1,5 +1,6 @@
 test = room: "C217B7QG0" # test
 mode = 'normal'
+envelope = room: "C0JHEPQ94" # general
 
 module.exports = (robot) ->
 
@@ -9,7 +10,7 @@ module.exports = (robot) ->
     robot.logger.error res
 
   # startup
-  robot.send test, '!!!'
+  robot.send envelope, '!!!'
   setTimeout () ->
     msgs = JSON.parse(robot.brain.get('msgs')||'[]')
     message = msgs[Math.floor(Math.random() * msgs.length)] || ''

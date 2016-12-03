@@ -1,0 +1,29 @@
+{
+  "env": {
+    "HEROKU_URL": {
+      "value": "https://nabnab-bot.herokuapp.com/"
+    },
+    "HUBOT_HEROKU_KEEPALIVE_URL": {
+      "value": "https://nabnab-bot.herokuapp.com/"
+    },
+    "HUBOT_HEROKU_SLEEP_TIME": {
+      "value": "00:00"
+    },
+    "TZ": {
+      "value": "Asia/Tokyo"
+    },
+    "HUBOT_SLACK_INCOMING_WEBHOOK_GOHAN": {
+      "description": "Please specify webhook key for gohan channel"
+    },
+    "HUBOT_SLACK_INCOMING_WEBHOOK_TEST": {
+      "description": "Please specify webhook key for test channel"
+    },
+    "HUBOT_SLACK_TOKEN": {
+      "description": "Please specify slack token"
+    }
+  },
+  "addons": [
+    "scheduler:standard",
+    "rediscloud:30"
+  ]
+}
