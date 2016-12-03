@@ -38,3 +38,6 @@ module.exports = (robot) ->
 
   robot.hear /(ナブチ|なぶち)(|さん|様)/, (msg) ->
     sendReaction msg, 100
+
+  robot.hear /ナブチ様　起きてください　デス/, (msg) ->
+    msg.send "!!!"
