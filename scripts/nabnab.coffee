@@ -10,7 +10,6 @@ module.exports = (robot) ->
     robot.logger.error res
 
   # startup
-  robot.send envelope, '!!!'
   setTimeout () ->
     msgs = JSON.parse(robot.brain.get('msgs')||'[]')
     message = msgs[Math.floor(Math.random() * msgs.length)] || ''
@@ -38,6 +37,3 @@ module.exports = (robot) ->
 
   robot.hear /(ナブチ|なぶち)(|さん|様)/, (msg) ->
     sendReaction msg, 100
-
-  robot.hear /ナブチ様　起きてください　デス/, (msg) ->
-    msg.send "!!!"
