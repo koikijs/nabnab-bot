@@ -16,6 +16,10 @@ module.exports = (robot) ->
     robot.send test, message
   , 5000
 
+  # drink party
+  robot.hear /なぶちさん飲み会出席ですよね？/, (msg) ->
+    msg.send "はい。もちろん。"
+
   # probability ... number, 0%~100%
   sendReaction = (msg, probability) ->
     randomInt = Math.floor(Math.random() * ((100/probability)*5))
