@@ -17,7 +17,7 @@ module.exports = (robot) ->
   , 5000
 
   # say yes
-  robot.hear /なぶちさん.*ですよね？/, (msg) ->
+  robot.hear /なぶちさん.*(です|ます)よね？/, (msg) ->
     msg.send "はい。もちろん。"
 
   # probability ... number, 0%~100%
