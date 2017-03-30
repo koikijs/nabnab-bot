@@ -16,8 +16,8 @@ module.exports = (robot) ->
     robot.send test, message
   , 5000
 
-  # drink party
-  robot.hear /なぶちさん飲み会出席ですよね？/, (msg) ->
+  # say yes
+  robot.hear /なぶちさん.*ですよね？/, (msg) ->
     msg.send "はい。もちろん。"
 
   # probability ... number, 0%~100%
@@ -39,5 +39,5 @@ module.exports = (robot) ->
   robot.hear /.*/, (msg) ->
     sendReaction msg, 20
 
-  robot.hear /(ナブチ|なぶち)(|さん|様)/, (msg) ->
+  robot.hear /(ナブチ|なぶち)/, (msg) ->
     sendReaction msg, 100
