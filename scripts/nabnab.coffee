@@ -17,8 +17,16 @@ module.exports = (robot) ->
   , 5000
 
   # say yes
-  robot.hear /なぶちさん.*(です|ます)よね？/, (msg) ->
+  robot.hear /(ナブチ|なぶち)さん.*(です|ます)よね？/, (msg) ->
     msg.send "はい。もちろん。"
+
+  # address
+  robot.hear /(ナブチ|なぶち).*(住所).*？/, (msg) ->
+    msg.send "#{process.env.NAB_NAB_ADDRESS}です！"
+
+  # room
+  robot.hear /(ナブチ|なぶち).*(何号室).*？/, (msg) ->
+    msg.send "#{process.env.NAB_NAB_ROOM}です！"
 
   # probability ... number, 0%~100%
   sendReaction = (msg, probability) ->
