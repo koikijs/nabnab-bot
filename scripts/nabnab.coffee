@@ -45,7 +45,7 @@ module.exports = (robot) ->
       else
 
   robot.hear /.*/, (msg) ->
-    sendReaction msg, 20
+    sendReaction msg, 2
 
   robot.hear /(ナブチ|なぶち)/, (msg) ->
-    sendReaction msg, 100
+    sendReaction msg, 10
